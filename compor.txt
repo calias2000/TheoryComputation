@@ -1,0 +1,380 @@
+;Diogo Lopes
+;Gonçalo Mateus
+;Tomas Silva
+
+Qcopy ______ ______ slssss Qrollback
+Qcopy Q_____ QQ____ rrssss Qcopy
+Qcopy A_____ AA____ rrssss Qcopy
+Qcopy Y_____ YY____ rrssss Qcopy
+Qcopy N_____ NN____ rrssss Qcopy
+Qcopy S_____ SS____ rrssss Qcopy
+Qcopy L_____ LL____ rrssss Qcopy
+Qcopy R_____ RR____ rrssss Qcopy
+Qcopy ;_____ ;;____ rrssss Qcopy
+Qcopy $_____ $$____ rrssss Qcopy
+Qcopy 0_____ 00____ rrssss Qcopy
+Qcopy 1_____ 11____ rrssss Qcopy
+Qcopy 2_____ 22____ rrssss Qcopy
+Qcopy 3_____ 33____ rrssss Qcopy
+Qcopy 4_____ 44____ rrssss Qcopy
+Qcopy 5_____ 55____ rrssss Qcopy
+Qcopy 6_____ 66____ rrssss Qcopy
+Qcopy 7_____ 77____ rrssss Qcopy
+Qcopy 8_____ 88____ rrssss Qcopy
+Qcopy 9_____ 99____ rrssss Qcopy
+
+Qrollback *_____ *_____ ssssss Qstart
+Qrollback **____ **____ slssss Qrollback
+
+
+Qstart *$____ *$____ ssssss Qfindcoma
+Qstart **____ **____ srssss Qstart
+
+Qfindcoma *;____ *;____ srssss Qfinda
+Qfindcoma **____ **____ slssss Qfindcoma
+
+Qfinda *A____ *A____ slssss Qdecr
+Qfinda **____ **____ srssss Qfinda
+
+Qdecr *9__*_ *81_*_ ssrsss Qdecr
+Qdecr *8__*_ *71_*_ ssrsss Qdecr
+Qdecr *7__*_ *61_*_ ssrsss Qdecr
+Qdecr *6__*_ *51_*_ ssrsss Qdecr
+Qdecr *5__*_ *41_*_ ssrsss Qdecr
+Qdecr *4__*_ *31_*_ ssrsss Qdecr
+Qdecr *3__*_ *21_*_ ssrsss Qdecr
+Qdecr *2__*_ *11_*_ ssrsss Qdecr
+Qdecr *1__*_ *01_*_ ssrsss Qdecr
+Qdecr *0__*_ *9__*_ slssss Qcheckzero
+
+Qcheckzero *Q*_*_ *Q*_*_ srssss Qcheckfinal
+Qcheckzero *9__*_ *81_*_ srrsss Qfinda
+Qcheckzero *8__*_ *71_*_ srrsss Qfinda
+Qcheckzero *7__*_ *61_*_ srrsss Qfinda
+Qcheckzero *6__*_ *51_*_ srrsss Qfinda
+Qcheckzero *5__*_ *41_*_ srrsss Qfinda
+Qcheckzero *4__*_ *31_*_ srrsss Qfinda
+Qcheckzero *3__*_ *21_*_ srrsss Qfinda
+Qcheckzero *2__*_ *11_*_ srrsss Qfinda
+Qcheckzero *1__*_ *01_*_ srrsss Qfinda
+Qcheckzero *0__*_ *9__*_ slssss Qcheckzero
+
+Qcheckfinal *_*___ *_1___ llssss Qfindlastcomma
+Qcheckfinal ***___ ***___ srssss Qcheckfinal
+
+Qfindlastcomma ;;*___ ;;*___ rrssss Qcopyunary
+Qfindlastcomma ***___ ***___ llssss Qfindlastcomma
+
+Qcopyunary **_**_ **_**_ ssssss QfindlastA
+Qcopyunary **1**_ **11*_ sslrss Qcopyunary
+
+QfindlastA AA**__ AA**__ llssss Qdecr1
+QfindlastA ***___ ***___ rrssss QfindlastA
+
+Qdecr1 *9*_*_ *8*1*_ sssrss Qdecr1
+Qdecr1 *8*_*_ *7*1*_ sssrss Qdecr1
+Qdecr1 *7*_*_ *6*1*_ sssrss Qdecr1
+Qdecr1 *6*_*_ *5*1*_ sssrss Qdecr1
+Qdecr1 *5*_*_ *4*1*_ sssrss Qdecr1
+Qdecr1 *4*_*_ *3*1*_ sssrss Qdecr1
+Qdecr1 *3*_*_ *2*1*_ sssrss Qdecr1
+Qdecr1 *2*_*_ *1*1*_ sssrss Qdecr1
+Qdecr1 *1*_*_ *0*1*_ sssrss Qdecr1
+Qdecr1 *0*_*_ *9*_*_ llssss Qcheckzero1
+
+Qcheckzero1 *Q*_*_ *Q*_*_ ssslss Qsoma
+Qcheckzero1 *9__*_ *8_1*_ rrsrss QfindlastA
+Qcheckzero1 *8__*_ *7_1*_ rrsrss QfindlastA
+Qcheckzero1 *7__*_ *6_1*_ rrsrss QfindlastA
+Qcheckzero1 *6__*_ *5_1*_ rrsrss QfindlastA
+Qcheckzero1 *5__*_ *4_1*_ rrsrss QfindlastA
+Qcheckzero1 *4__*_ *3_1*_ rrsrss QfindlastA
+Qcheckzero1 *3__*_ *2_1*_ rrsrss QfindlastA
+Qcheckzero1 *2__*_ *1_1*_ rrsrss QfindlastA
+Qcheckzero1 *1__*_ *0_1*_ rrsrss QfindlastA
+Qcheckzero1 *0__*_ *9__*_ llssss Qcheckzero1
+
+Qsoma ***_*_ ***_*_ ssssss Qpushfirstleft
+Qsoma ***1*_ ***_*_ ssslss Qadd
+
+Qadd ****__ ****1_ ssssss Qsoma
+Qadd ****0_ ****1_ ssssss Qsoma
+Qadd ****1_ ****2_ ssssss Qsoma
+Qadd ****2_ ****3_ ssssss Qsoma
+Qadd ****3_ ****4_ ssssss Qsoma
+Qadd ****4_ ****5_ ssssss Qsoma
+Qadd ****5_ ****6_ ssssss Qsoma
+Qadd ****6_ ****7_ ssssss Qsoma
+Qadd ****7_ ****8_ ssssss Qsoma
+Qadd ****8_ ****9_ ssssss Qsoma
+Qadd ****9_ ****0_ ssssls Qdecimal
+
+Qdecimal ****__ ****1_ ssssss Qfindlastsum
+Qdecimal ****0_ ****1_ ssssss Qfindlastsum
+Qdecimal ****1_ ****2_ ssssss Qfindlastsum
+Qdecimal ****2_ ****3_ ssssss Qfindlastsum
+Qdecimal ****3_ ****4_ ssssss Qfindlastsum
+Qdecimal ****4_ ****5_ ssssss Qfindlastsum
+Qdecimal ****5_ ****6_ ssssss Qfindlastsum
+Qdecimal ****6_ ****7_ ssssss Qfindlastsum
+Qdecimal ****7_ ****8_ ssssss Qfindlastsum
+Qdecimal ****8_ ****9_ ssssss Qfindlastsum
+Qdecimal ****9_ ****0_ ssssls Qdecimal
+
+Qfindlastsum ****__ ****__ ssssls Qsoma
+Qfindlastsum *****_ *****_ ssssrs Qfindlastsum
+
+Qpushfirstleft _****_ _****_ rsssss Qpushsecondright
+Qpushfirstleft *****_ *****_ lsssss Qpushfirstleft
+
+Qpushsecondright *_***_ *_***_ slssss Qcleansecondleft
+Qpushsecondright *****_ *****_ srssss Qpushsecondright
+
+Qcleansecondleft *_***_ *_***_ srssss Qstartsolving
+Qcleansecondleft *****_ *_***_ slssss Qcleansecondleft
+
+
+Qstartsolving $_***_ $;***_ rrssss Qstartsolving1
+Qstartsolving Q_***_ QQ***_ rrssss Qcopytolast
+Qstartsolving A_***_ AA***_ rrssss Qstartsolving
+Qstartsolving Y_***_ YQ***_ rrrsss QfindnextA
+Qstartsolving N_***_ NN***_ rrssss QtreatN1
+Qstartsolving S_***_ SS***_ rrssss Qstartsolving
+Qstartsolving L_***_ LL***_ rrssss Qstartsolving
+Qstartsolving R_***_ RR***_ rrssss Qstartsolving
+Qstartsolving ;_***_ ;;***_ rrssss Qstartsolving
+Qstartsolving 0_***_ 00***_ rrssss Qstartsolving
+Qstartsolving 1_***_ 11***_ rrssss Qstartsolving
+Qstartsolving 2_***_ 22***_ rrssss Qstartsolving
+Qstartsolving 3_***_ 33***_ rrssss Qstartsolving
+Qstartsolving 4_***_ 44***_ rrssss Qstartsolving
+Qstartsolving 5_***_ 55***_ rrssss Qstartsolving
+Qstartsolving 6_***_ 66***_ rrssss Qstartsolving
+Qstartsolving 7_***_ 77***_ rrssss Qstartsolving
+Qstartsolving 8_***_ 88***_ rrssss Qstartsolving
+Qstartsolving 9_***_ 99***_ rrssss Qstartsolving
+
+Qcopytolast A_**** A***** sssssl Qdecimals
+Qcopytolast 0_***_ 0_***0 rssssr Qcopytolast
+Qcopytolast 1_***_ 1_***1 rssssr Qcopytolast
+Qcopytolast 2_***_ 2_***2 rssssr Qcopytolast
+Qcopytolast 3_***_ 3_***3 rssssr Qcopytolast
+Qcopytolast 4_***_ 4_***4 rssssr Qcopytolast
+Qcopytolast 5_***_ 5_***5 rssssr Qcopytolast
+Qcopytolast 6_***_ 6_***6 rssssr Qcopytolast
+Qcopytolast 7_***_ 7_***7 rssssr Qcopytolast
+Qcopytolast 8_***_ 8_***8 rssssr Qcopytolast
+Qcopytolast 9_***_ 9_***9 rssssr Qcopytolast
+
+Qdecimals ****__ ****__ ssssrr Qpushlasttapes
+Qdecimals *****_ *****0 ssssll Qdecimals
+Qdecimals ****** ****** ssssll Qdecimals
+
+Qpushlasttapes *_**__ *_**__ ssssls Qstartsolving
+Qpushlasttapes *_***0 *0***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***1 *1***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***2 *2***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***3 *3***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***4 *4***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***5 *5***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***6 *6***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***7 *7***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***8 *8***_ srssrr Qpushlasttapes
+Qpushlasttapes *_***9 *9***_ srssrr Qpushlasttapes
+
+QfindnextA A***** A***** ssssss Qsoma1
+QfindnextA ****** ****** rsssss QfindnextA
+
+Qsoma1 **__** **__** sslsss Qdecimals
+Qsoma1 **1_** **1_** ssrsss Qadd1
+
+Qadd1 *****_ *****1 ssssss Qsoma1
+Qadd1 *****0 *****1 ssssss Qsoma1
+Qadd1 *****1 *****2 ssssss Qsoma1
+Qadd1 *****2 *****3 ssssss Qsoma1
+Qadd1 *****3 *****4 ssssss Qsoma1
+Qadd1 *****4 *****5 ssssss Qsoma1
+Qadd1 *****5 *****6 ssssss Qsoma1
+Qadd1 *****6 *****7 ssssss Qsoma1
+Qadd1 *****7 *****8 ssssss Qsoma1
+Qadd1 *****8 *****9 ssssss Qsoma1
+Qadd1 *****9 *****0 sssssl Qdecimal1
+
+Qdecimal1 *****_ *****1 ssssss Qfindlastsum1
+Qdecimal1 *****0 *****1 ssssss Qfindlastsum1
+Qdecimal1 *****1 *****2 ssssss Qfindlastsum1
+Qdecimal1 *****2 *****3 ssssss Qfindlastsum1
+Qdecimal1 *****3 *****4 ssssss Qfindlastsum1
+Qdecimal1 *****4 *****5 ssssss Qfindlastsum1
+Qdecimal1 *****5 *****6 ssssss Qfindlastsum1
+Qdecimal1 *****6 *****7 ssssss Qfindlastsum1
+Qdecimal1 *****7 *****8 ssssss Qfindlastsum1
+Qdecimal1 *****8 *****9 ssssss Qfindlastsum1
+Qdecimal1 *****9 *****0 sssssl Qdecimal1
+
+Qfindlastsum1 *****_ *****_ sssssl Qsoma1
+Qfindlastsum1 ****** ****** sssssr Qfindlastsum1
+
+Qpushfith1 ****_* ****_* ssssls Qstartsolving
+Qpushfith1 ****** ****** ssssrs Qpushfith1
+
+QtreatN1 A***** A***** ssssss QprintN1
+QtreatN1 N***** N***** rsssss QtreatN1
+
+QprintN1 ****_* ****_* ssssrs Qpushfith1
+QprintN1 ****** *N**** srssls QprintN1
+
+
+Qstartsolving1 __***_ __***_ slssss Qfinal
+Qstartsolving1 Q_***_ QQ***_ rrssss Qcopytosecond
+Qstartsolving1 A_***_ AA***_ rrssss Qstartsolving1
+Qstartsolving1 Y_***_ YY***_ rrssss QtreatY
+Qstartsolving1 N_***_ NN***_ rrssss QtreatN
+Qstartsolving1 S_***_ SS***_ rrssss Qstartsolving1
+Qstartsolving1 L_***_ LL***_ rrssss Qstartsolving1
+Qstartsolving1 R_***_ RR***_ rrssss Qstartsolving1
+Qstartsolving1 ;_***_ ;;***_ rrssss Qstartsolving1
+Qstartsolving1 0_***_ 00***_ rrssss Qstartsolving1
+Qstartsolving1 1_***_ 11***_ rrssss Qstartsolving1
+Qstartsolving1 2_***_ 22***_ rrssss Qstartsolving1
+Qstartsolving1 3_***_ 33***_ rrssss Qstartsolving1
+Qstartsolving1 4_***_ 44***_ rrssss Qstartsolving1
+Qstartsolving1 5_***_ 55***_ rrssss Qstartsolving1
+Qstartsolving1 6_***_ 66***_ rrssss Qstartsolving1
+Qstartsolving1 7_***_ 77***_ rrssss Qstartsolving1
+Qstartsolving1 8_***_ 88***_ rrssss Qstartsolving1
+Qstartsolving1 9_***_ 99***_ rrssss Qstartsolving1
+
+
+Qcopytosecond **_*** **_*** ssrsss Qpushunary
+Qcopytosecond **1_** **11** sslrss Qcopytosecond
+
+Qpushunary *__*** *__*** sslsss QnextA
+Qpushunary *_1*** *_1*** ssrsss Qpushunary
+
+
+QnextA A***** A***** sssssl Qdecr2
+QnextA 0****_ 0****0 rssssr QnextA
+QnextA 1****_ 1****1 rssssr QnextA
+QnextA 2****_ 2****2 rssssr QnextA
+QnextA 3****_ 3****3 rssssr QnextA
+QnextA 4****_ 4****4 rssssr QnextA
+QnextA 5****_ 5****5 rssssr QnextA
+QnextA 6****_ 6****6 rssssr QnextA
+QnextA 7****_ 7****7 rssssr QnextA
+QnextA 8****_ 8****8 rssssr QnextA
+QnextA 9****_ 9****9 rssssr QnextA
+
+
+Qdecr2 ***_*9 ***1*8 sssrss Qdecr2
+Qdecr2 ***_*8 ***1*7 sssrss Qdecr2
+Qdecr2 ***_*7 ***1*6 sssrss Qdecr2
+Qdecr2 ***_*6 ***1*5 sssrss Qdecr2
+Qdecr2 ***_*5 ***1*4 sssrss Qdecr2
+Qdecr2 ***_*4 ***1*3 sssrss Qdecr2
+Qdecr2 ***_*3 ***1*2 sssrss Qdecr2
+Qdecr2 ***_*2 ***1*1 sssrss Qdecr2
+Qdecr2 ***_*1 ***1*0 sssrss Qdecr2
+Qdecr2 ***_*0 ***_*9 sssssl Qcheckzero2
+
+Qcheckzero2 *****_ *****_ sssssr Qcleanlast
+Qcheckzero2 ***_*9 ***1*8 sssrss Qcheckrightstall
+Qcheckzero2 ***_*8 ***1*7 sssrss Qcheckrightstall
+Qcheckzero2 ***_*7 ***1*6 sssrss Qcheckrightstall
+Qcheckzero2 ***_*6 ***1*5 sssrss Qcheckrightstall
+Qcheckzero2 ***_*5 ***1*4 sssrss Qcheckrightstall
+Qcheckzero2 ***_*4 ***1*3 sssrss Qcheckrightstall
+Qcheckzero2 ***_*3 ***1*2 sssrss Qcheckrightstall
+Qcheckzero2 ***_*2 ***1*1 sssrss Qcheckrightstall
+Qcheckzero2 ***_*1 ***1*0 sssrss Qcheckrightstall
+Qcheckzero2 ***_*0 ***_*9 sssssl Qcheckzero2
+
+Qcheckrightstall *****_ *****_ sssssl Qdecr2
+Qcheckrightstall ****** ****** sssssr Qcheckrightstall
+
+
+Qcleanlast *****_ *****_ ssslss Qsoma2
+Qcleanlast ****** *****_ sssssr Qcleanlast
+
+Qpushlasttapes1 *_**__ *_**__ ssssls Qstartsolving1
+Qpushlasttapes1 *_***0 *0***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***1 *1***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***2 *2***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***3 *3***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***4 *4***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***5 *5***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***6 *6***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***7 *7***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***8 *8***_ srssrr Qpushlasttapes1
+Qpushlasttapes1 *_***9 *9***_ srssrr Qpushlasttapes1
+
+Qdecimals1 ****__ ****__ ssssrr Qpushlasttapes1
+Qdecimals1 *****_ *****0 ssssll Qdecimals1
+Qdecimals1 ****** ****** ssssll Qdecimals1
+
+Qsoma2 ***_** ***_** ssssss Qdecimals1
+Qsoma2 ***1** ***_** ssslss Qadd2
+
+Qadd2 *****_ *****1 ssssss Qsoma2
+Qadd2 *****0 *****1 ssssss Qsoma2
+Qadd2 *****1 *****2 ssssss Qsoma2
+Qadd2 *****2 *****3 ssssss Qsoma2
+Qadd2 *****3 *****4 ssssss Qsoma2
+Qadd2 *****4 *****5 ssssss Qsoma2
+Qadd2 *****5 *****6 ssssss Qsoma2
+Qadd2 *****6 *****7 ssssss Qsoma2
+Qadd2 *****7 *****8 ssssss Qsoma2
+Qadd2 *****8 *****9 ssssss Qsoma2
+Qadd2 *****9 *****0 sssssl Qdecimal2
+
+Qdecimal2 *****_ *****1 ssssss Qfindlastsum2
+Qdecimal2 *****0 *****1 ssssss Qfindlastsum2
+Qdecimal2 *****1 *****2 ssssss Qfindlastsum2
+Qdecimal2 *****2 *****3 ssssss Qfindlastsum2
+Qdecimal2 *****3 *****4 ssssss Qfindlastsum2
+Qdecimal2 *****4 *****5 ssssss Qfindlastsum2
+Qdecimal2 *****5 *****6 ssssss Qfindlastsum2
+Qdecimal2 *****6 *****7 ssssss Qfindlastsum2
+Qdecimal2 *****7 *****8 ssssss Qfindlastsum2
+Qdecimal2 *****8 *****9 ssssss Qfindlastsum2
+Qdecimal2 *****9 *****0 sssssl Qdecimal2
+
+Qfindlastsum2 *****_ *****_ sssssl Qsoma2
+Qfindlastsum2 ****** ****** sssssr Qfindlastsum2
+
+QtreatY A***** A***** ssssss QprintY
+QtreatY Y***** Y***** rsssss QtreatY
+
+QprintY ****_* ****_* ssssrs Qpushfith
+QprintY ****** *Y**** srssls QprintY
+
+Qpushfith ****_* ****_* ssssls Qstartsolving1
+Qpushfith ****** ****** ssssrs Qpushfith
+
+QtreatN A***** A***** ssssss QprintN
+QtreatN N***** N***** rsssss QtreatN
+
+QprintN ****_* ****_* ssssrs Qpushfith
+QprintN ****** *N**** srssls QprintN
+
+Qfinal *_**** *_**** sssssr halt-accept
+Qfinal *Q***_ *Q***Q slsssl Qfinal
+Qfinal *A***_ *A***A slsssl Qfinal
+Qfinal *Y***_ *Y***Y slsssl Qfinal
+Qfinal *N***_ *N***N slsssl Qfinal
+Qfinal *S***_ *S***S slsssl Qfinal
+Qfinal *D***_ *D***D slsssl Qfinal
+Qfinal *L***_ *L***L slsssl Qfinal
+Qfinal *R***_ *R***R slsssl Qfinal
+Qfinal *;***_ *;***; slsssl Qfinal
+Qfinal *$***_ *$***$ slsssl Qfinal
+Qfinal *0***_ *0***0 slsssl Qfinal
+Qfinal *1***_ *1***1 slsssl Qfinal
+Qfinal *2***_ *2***2 slsssl Qfinal
+Qfinal *3***_ *3***3 slsssl Qfinal
+Qfinal *4***_ *4***4 slsssl Qfinal
+Qfinal *5***_ *5***5 slsssl Qfinal
+Qfinal *6***_ *6***6 slsssl Qfinal
+Qfinal *7***_ *7***7 slsssl Qfinal
+Qfinal *8***_ *8***8 slsssl Qfinal
+Qfinal *9***_ *9***9 slsssl Qfinal

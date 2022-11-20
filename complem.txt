@@ -1,0 +1,27 @@
+;Diogo Lopes
+;Gonçalo Mateus
+;Tomas Silva
+
+Q0 N_ NY rr Q0
+Q0 Y_ YN rr Q0
+Q0 Q_ QQ rr Q0
+Q0 A_ AA rr Q0
+Q0 S_ SS rr Q0
+Q0 L_ LL rr Q0
+Q0 R_ RR rr Q0
+Q0 ;_ ;; rr Q0
+Q0 0_ 00 rr Q0
+Q0 1_ 11 rr Q0
+Q0 2_ 22 rr Q0
+Q0 3_ 33 rr Q0
+Q0 4_ 44 rr Q0
+Q0 5_ 55 rr Q0
+Q0 6_ 66 rr Q0
+Q0 7_ 77 rr Q0
+Q0 8_ 88 rr Q0
+Q0 9_ 99 rr Q0
+Q0 __ __ sl Q1
+Q0 *_ *_ rr halt-reject
+
+Q1 __ __ sr halt-accept
+Q1 _* _* sl Q1
